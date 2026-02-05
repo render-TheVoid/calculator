@@ -58,7 +58,7 @@ const App: React.FC = () => {
     setHead("Calculator")
   };
 
-  const buttonCss: string = 'border border-white/10 rounded-md bg-neutral-900 p-6 hover:scale-104 active:scale-98 active:bg-neutral-900 transition-all hover:bg-neutral-800 cursor-pointer';
+  const buttonCss: string = 'border border-white/10 rounded-md bg-neutral-900 p-6 hover:scale-104 active:scale-90 active:bg-neutral-800 transition-all hover:bg-neutral-700 cursor-pointer';
 
   if (showCheckout && clientSecret) {
     return (
@@ -69,11 +69,11 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className='flex items-center justify-center h-screen flex-col bg-neutral-950 gap-6 p-6' >
+    <div className='flex items-center justify-center h-screen flex-col bg-black gap-6 p-6' >
       <h1 className='text-white/80 font-bold text-4xl'>{head}</h1>
-      <div className='grid grid-cols-4 text-2xl font-bold gap-2 border max-w-md border-white/10 rounded-xl text-white/70 p-4'>
-        <input type="text" value={input} className='col-span-4 bg-neutral-800 border border-white/10 outline-none rounded-md p-6 mb-2 text-3xl' />
-        <button className='col-span-2 border border-white/10 rounded-md bg-neutral-900 hover:scale-104 active:scale-98 active:bg-neutral-900 transition-all hover:bg-neutral-800 cursor-pointer' onClick={() => setInput("")}>AC</button>
+      <div className='grid grid-cols-4 text-2xl bg-neutral-950 font-bold gap-2 border max-w-md border-white/10 rounded-xl text-white/70 p-4'>
+        <input type="text" value={input} className='col-span-4 bg-neutral-900 border border-white/10 outline-none rounded-md p-6 mb-2 text-3xl' />
+        <button className='col-span-2 border border-white/10 rounded-md bg-neutral-900 hover:scale-104 active:scale-90 active:bg-neutral-800 transition-all hover:bg-neutral-700 cursor-pointer' onClick={() => setInput("")}>AC</button>
         <button className={buttonCss} onClick={() => setInput(input.slice(0, -1))}>DE</button>
         <button className={buttonCss} onClick={() => appendInput("/")}>/</button>
         <button className={buttonCss} onClick={() => appendInput("7")}>7</button>

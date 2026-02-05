@@ -8,7 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 6767;
 
 app.use(cors({
-    origin: '*'
+    origin: '*',
+    methods: ['GET', 'POST'],
 }));
 app.use(express.json());
 app.use('/api', stripeRoute);
