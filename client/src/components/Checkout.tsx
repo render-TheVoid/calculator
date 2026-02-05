@@ -15,7 +15,7 @@ function CheckoutForm() {
         const result = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                return_url: "http://localhost:5173/success",
+                return_url: "https://calculator-67.vercel.app/success",
             },
         });
 

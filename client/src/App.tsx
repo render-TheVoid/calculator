@@ -32,7 +32,7 @@ const App: React.FC = () => {
   const [showCheckout, setShowCheckout] = useState<boolean>();
 
   const startPayment = async () => {
-    const res = await axios.post('http://localhost:6767/api/create-payment-intent')
+    const res = await axios.post('https://calculator-x4d7.onrender.com/api/create-payment-intent')
     setClientSecret(res.data.clientSecret);
     setShowCheckout(true);
   };
