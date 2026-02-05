@@ -71,7 +71,7 @@ export default function Checkout() {
     const [clientSecret, setClientSecret] = useState<string>("");
 
     useEffect(() => {
-        fetch("http://localhost:6767/api/create-payment-intent", {
+        fetch("https://calculator-x4d7.onrender.com/api/create-payment-intent", {
             method: "POST",
         })
             .then(res => res.json())
